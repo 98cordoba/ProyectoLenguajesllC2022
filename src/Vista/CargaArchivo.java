@@ -7,7 +7,7 @@ import Vista.Principal;
  * @author fabia
  */
 public class CargaArchivo extends javax.swing.JFrame {
-    Principal volver = new Principal();
+    //Principal volver = new Principal();
     /**
      * Creates new form CargaArchivo
      */
@@ -106,8 +106,8 @@ public class CargaArchivo extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnSubirArchivoActionPerformed
 
     private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
-        volver.setVisible(true);
-        this.setVisible(false);
+        //volver.setVisible(true);
+        //this.setVisible(false);
     }//GEN-LAST:event_jBtnRegresarActionPerformed
 
     /**

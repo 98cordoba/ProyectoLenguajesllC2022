@@ -24,8 +24,7 @@ public class CL_Conexion {
             if (conn != null) { // INICIA CONDICIONAL
                 JOptionPane.showMessageDialog(null,"Conexion exitosa"); //MOSTRAR MENSAJE
                 index.setVisible(true);            // MUESTRO LA PANTALLA PRINCIPAL
-                lg.setVisible(false);              // ESCONDO LA PAGINA LOGGIN
-                
+                lg.setVisible(false);              // ESCONDO LA PAGINA LOGGIN                
             }// CIERRA CONDICIONAL
         } catch (SQLException | ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null,"Error al conectar a la base de datos" + ex +"/n verifique sus datos" ); // MENSAJE DE ERROR
