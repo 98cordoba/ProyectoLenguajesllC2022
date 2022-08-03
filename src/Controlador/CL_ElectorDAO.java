@@ -29,11 +29,11 @@ public class CL_ElectorDAO {
             tabla.addColumn("Nombre Elector");      //COLUMNA
             tabla.addColumn("1.Apellido Elector");  //COLUMNA
             tabla.addColumn("2.Apellido Elector");  //COLUMNA           
-            CallableStatement cstmt = conexion.prepareCall("{? = call read_txt}"); //lLAMA UN PROCEDIMIENTO ALMACENADO Y Retorna un cursor            
+            CallableStatement cstmt = conexion.prepareCall("{? = call fn_listar}"); //lLAMA UN PROCEDIMIENTO ALMACENADO Y Retorna un cursor            
             cstmt.registerOutParameter(1,OracleTypes.CURSOR);           
             cstmt.execute();  // SE EJECUTA          
             ResultSet rs = ((OracleCallableStatement)cstmt).getCursor(1);            
-            String datos[] = new String[7]; // SE INICIALIZA UN ARRAY DE STRING            
+            String datos[] = new String[8]; // SE INICIALIZA UN ARRAY DE STRING            
             while (rs.next()) { // EMPIEZA EL WHILE
                 datos[0] = String.valueOf(rs.getInt("cedulaElector"));  //ALMACENA UN DATO
                 datos[1] = String.valueOf(rs.getInt("codElector"));     //ALMACENA UN DATO

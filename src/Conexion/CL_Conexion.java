@@ -20,7 +20,7 @@ public class CL_Conexion {
     public void abrirConexion(String username,String password) { //CREAR LA CONEXION MEDIANTE PARAMETROS
         try {
             Class.forName("oracle.jdbc.OracleDriver"); // DRIVER
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE",username,password); // SE PASAN LOS PARAMETROS
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl",username,password); // SE PASAN LOS PARAMETROS
             if (conn != null) { // INICIA CONDICIONAL
                 JOptionPane.showMessageDialog(null,"Conexion exitosa"); //MOSTRAR MENSAJE
                 index.setVisible(true);            // MUESTRO LA PANTALLA PRINCIPAL
