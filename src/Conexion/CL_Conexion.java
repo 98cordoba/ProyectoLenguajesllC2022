@@ -17,10 +17,11 @@ public class CL_Conexion {
     public CL_Conexion() {
         abrirConexion("hr","hr01");
     }
+    
     public void abrirConexion(String username,String password) { //CREAR LA CONEXION MEDIANTE PARAMETROS
         try {
             Class.forName("oracle.jdbc.OracleDriver"); // DRIVER
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE",username,password); // SE PASAN LOS PARAMETROS
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl",username,password); // SE PASAN LOS PARAMETROS
             if (conn != null) { // INICIA CONDICIONAL
                 JOptionPane.showMessageDialog(null,"Conexion exitosa"); //MOSTRAR MENSAJE
                 index.setVisible(true);            // MUESTRO LA PANTALLA PRINCIPAL
@@ -28,8 +29,8 @@ public class CL_Conexion {
             }// CIERRA CONDICIONAL
         } catch (SQLException | ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null,"Error al conectar a la base de datos" + ex +"/n verifique sus datos" ); // MENSAJE DE ERROR
-            Loggin lg = new Loggin();   // SE INICIALIZA LA PAG.LOGGIN
-            lg.setVisible(true);        // ESCONDO LA PAGINA LOGGIN   
+           // Loggin lg = new Loggin();   // SE INICIALIZA LA PAG.LOGGIN
+           // lg.setVisible(true);        // ESCONDO LA PAGINA LOGGIN   
         }
     }
     public Connection obtenerConexion(){ // OBTENER CONEXION

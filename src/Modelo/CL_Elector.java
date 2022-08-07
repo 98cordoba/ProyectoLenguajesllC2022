@@ -10,7 +10,7 @@ public class CL_Elector {
     private int codElector;
     private String relleno;
     private Date fechaCaduca;
-    private int juntaReceptora;
+    private String juntaReceptora;
     private String nombreElector;
     private String primerApellido;
     private String segundoApellido;
@@ -19,7 +19,7 @@ public class CL_Elector {
     public CL_Elector() {
     }
 
-    public CL_Elector(int cedulaElector, int codElector, String relleno, Date fechaCaduca, int juntaReceptora, String nombreElector, String primerApellido, String segundoApellido) {
+    public CL_Elector(int cedulaElector, int codElector, String relleno, Date fechaCaduca, String juntaReceptora, String nombreElector, String primerApellido, String segundoApellido) {
         this.cedulaElector = cedulaElector;
         this.codElector = codElector;
         this.relleno = relleno;
@@ -62,11 +62,11 @@ public class CL_Elector {
         this.fechaCaduca = fechaCaduca;
     }
 
-    public int getJuntaReceptora() {
+    public String getJuntaReceptora() {
         return juntaReceptora;
     }
 
-    public void setJuntaReceptora(int juntaReceptora) {
+    public void setJuntaReceptora(String juntaReceptora) {
         this.juntaReceptora = juntaReceptora;
     }
 
