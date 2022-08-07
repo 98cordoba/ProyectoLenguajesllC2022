@@ -13,10 +13,10 @@ public class CL_Conexion {
     Connection conn = null;
     Principal index = new Principal(); // SE INICIALIZA LA PAG.PRINCIPAL
     Loggin lg = new Loggin();          // SE INICIALIZA LA PAG.LOGGIN
-    /*
+    
     public CL_Conexion() {
-        abrirConexion("","");
-    }*/
+        abrirConexion("hr","hr01");
+    }
     public void abrirConexion(String username,String password) { //CREAR LA CONEXION MEDIANTE PARAMETROS
         try {
             Class.forName("oracle.jdbc.OracleDriver"); // DRIVER
