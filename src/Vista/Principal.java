@@ -12,13 +12,13 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
 
-        listar();
+      // listar();
     }
 
     
-    private void listar(){
-        jTListado.setModel(dao.listarElectores());
-    } 
+    // private void listar(){
+      //  jTListado.setModel(dao.listarElectores());
+    //} 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

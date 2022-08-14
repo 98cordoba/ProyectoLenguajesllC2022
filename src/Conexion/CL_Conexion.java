@@ -13,11 +13,11 @@ public class CL_Conexion {
     Connection conn = null;
     Principal index = new Principal(); // SE INICIALIZA LA PAG.PRINCIPAL
     Loggin lg = new Loggin();          // SE INICIALIZA LA PAG.LOGGIN
-    
+   /*
     public CL_Conexion() {
-        abrirConexion("hr","hr01");
-    }
-    
+        abrirConexion("","");
+    } 
+    */
     public void abrirConexion(String username,String password) { //CREAR LA CONEXION MEDIANTE PARAMETROS
         try {
             Class.forName("oracle.jdbc.OracleDriver"); // DRIVER
@@ -29,7 +29,7 @@ public class CL_Conexion {
             }// CIERRA CONDICIONAL
         } catch (SQLException | ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null,"Error al conectar a la base de datos" + ex +"/n verifique sus datos" ); // MENSAJE DE ERROR
-           // Loggin lg = new Loggin();   // SE INICIALIZA LA PAG.LOGGIN
+           //Loggin lg = new Loggin();   // SE INICIALIZA LA PAG.LOGGIN
            // lg.setVisible(true);        // ESCONDO LA PAGINA LOGGIN   
         }
     }

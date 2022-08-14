@@ -9,7 +9,7 @@ import Vista.*;
  */
 public class Test {
     public static Connection conexion = null;
-
+Loggin lg = new Loggin();
     public static void main(String[] args) {        
         try {
             Loggin lg = new Loggin();
