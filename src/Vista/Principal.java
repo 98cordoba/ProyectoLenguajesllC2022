@@ -11,8 +11,10 @@ public class Principal extends javax.swing.JFrame {
     CargaArchivo cFile = new CargaArchivo();
     public Principal() {
         initComponents();
+
         listar();
     }
+
     
     private void listar(){
         jTListado.setModel(dao.listarElectores());

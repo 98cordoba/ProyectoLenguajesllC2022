@@ -13,11 +13,11 @@ import oracle.jdbc.OracleCallableStatement;
  */
 public class CL_ElectorDAO {
     public static Connection conexion = null; //INICIALIZAR CONEXION    
-  /*  public CL_ElectorDAO() { //SI LA CONEXION ES NULA LA OBTENGO
+    public CL_ElectorDAO() { //SI LA CONEXION ES NULA LA OBTENGO
         if (conexion == null) {
             conexion = new CL_Conexion().obtenerConexion();
         }
-    }   */
+    }     
     public DefaultTableModel listarElectores(){ //CREACIÓN O LISTADO DE LA J.TABLE DE ELECTORES 
         try {
             DefaultTableModel tabla = new DefaultTableModel(); // SE INICIALIZA LA TABLA
@@ -29,7 +29,7 @@ public class CL_ElectorDAO {
             tabla.addColumn("Nombre Elector");      //COLUMNA
             tabla.addColumn("1.Apellido Elector");  //COLUMNA
             tabla.addColumn("2.Apellido Elector");  //COLUMNA           
-            CallableStatement cstmt = conexion.prepareCall("{? = call FN_LISTAR}"); //lLAMA UN PROCEDIMIENTO ALMACENADO Y Retorna un cursor            
+            CallableStatement cstmt = conexion.prepareCall("{ ? = call FN_LISTAR}"); //lLAMA UN PROCEDIMIENTO ALMACENADO Y Retorna un cursor            
             cstmt.registerOutParameter(1,OracleTypes.CURSOR);           
             cstmt.execute();  // SE EJECUTA          
             ResultSet rs = ((OracleCallableStatement)cstmt).getCursor(1);            
